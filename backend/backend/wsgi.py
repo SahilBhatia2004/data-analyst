@@ -2,10 +2,11 @@ import os
 import sys
 from pathlib import Path
 
-# Add the repo root (two levels up from this file) to Python path
-# This makes "backend.backend.settings" importable no matter what cwd is.
-BASE_DIR = Path(__file__).resolve().parents[1]   # points to outer backend/
-sys.path.append(str(BASE_DIR))                   # adds outer backend/ to PYTHONPATH
+# Ensure both backend folders are discoverable
+BASE_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.append(str(BASE_DIR))
+sys.path.append(str(ROOT_DIR))
 
 from django.core.wsgi import get_wsgi_application
 
