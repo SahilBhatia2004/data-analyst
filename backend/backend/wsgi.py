@@ -1,13 +1,11 @@
-"""
-WSGI config for backend project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
-"""
-
 import os
+import sys
+from pathlib import Path
+
+# Add the repo root (two levels up from this file) to Python path
+# This makes "backend.backend.settings" importable no matter what cwd is.
+BASE_DIR = Path(__file__).resolve().parents[1]   # points to outer backend/
+sys.path.append(str(BASE_DIR))                   # adds outer backend/ to PYTHONPATH
 
 from django.core.wsgi import get_wsgi_application
 
