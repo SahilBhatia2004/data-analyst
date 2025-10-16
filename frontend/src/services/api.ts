@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { supabase } from './supabase';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://data-analyst-1sv9.onrender.com/api';
 
 // Extend the AxiosRequestConfig to include the _retry property
 declare module 'axios' {
