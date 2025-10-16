@@ -32,7 +32,13 @@ SECRET_KEY = env('SECRET_KEY', default='your-secret-key-here')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[
+    'localhost',
+    '127.0.0.1',
+    'data-analyst-1sv9.onrender.com',  
+    'data-analyst-mu.vercel.app',      
+])
+
 
 # Application definition
 
@@ -180,6 +186,7 @@ JWT_AUTH = {
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=[
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'https://data-analyst-mu.vercel.app',
 ])
 
 CORS_ALLOW_CREDENTIALS = True
